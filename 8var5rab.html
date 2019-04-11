@@ -1,0 +1,97 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <script>
+        var flag = false;
+        var x, y, s, a;
+        var arr = new Array();
+        do {
+            x = +prompt("Введите размер строки матрицы не больше 10 ", );
+            if (!isNaN(x) && x > 0 && x < 11) {
+                flag = true
+            } else {
+                alert("Error input");
+                flag = false;
+            }
+        } while (flag != true)
+
+
+        do {
+            y = +prompt("Введите размер столбца матрицы не больше 10 ", );
+            if (!isNaN(y) && y > 0 && y < 11) {
+                flag = true
+            } else {
+                alert("Error input");
+                flag = false;
+            }
+        } while (flag != true)
+
+
+
+
+
+
+
+
+        for (var i = 0; i < x; i++) {
+            arr[i] = new Array();
+            do {
+                for (var j = 0; j < y;) {
+                    var inc = prompt("Введите [" + (i + 1) + ";" + (j + 1) + "] элемент матрицы", );
+                    if (!isNaN(inc) && inc != "") {
+                        arr[i][j] = inc;
+                        flag = true
+                        j++;
+                    } else {
+                        alert("Error input");
+                        flag = false;
+                    }
+                }
+            } while (flag != true)
+        }
+
+        console.log(arr);
+        document.writeln(arr + "<br>");
+
+        do {
+            s = +prompt("Введите строку которую хотите заменить ", );
+            if (!isNaN(s) && s > 0 && s <= x) {
+                flag = true
+            } else {
+                alert("Error input");
+                flag = false;
+            }
+        } while (flag != true)
+
+        do {
+            a = +prompt("Введите строку на которую хотите заменить ", );
+            if (!isNaN(a) && a > 0 && a <= x && a != s) {
+                flag = true
+            } else {
+                alert("Error input");
+                flag = false;
+            }
+        } while (flag != true)
+
+
+
+        var newArr = [];
+
+        for (var i = 0; i < arr.length; i++) {
+            newArr[i] = arr[i];
+        }
+
+        newArr.splice(s, 1, arr[a]);
+        newArr.splice(a, 1, arr[s]);
+
+        console.log(newArr);
+        document.write(newArr);
+    </script>
+</body>
+
+</html>

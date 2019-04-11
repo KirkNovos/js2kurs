@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <script>
+        var sum = 0;
+
+        do {
+				var k = +prompt("k = ", );
+				if (!isNaN(k) && k != 0) {
+					flag = true
+				} else {
+					alert("Error input");
+					flag = false;
+				}
+                if (k<0) {
+                    flag = false;
+                    alert("k не может быть меньше 0");
+                } 
+			} while (flag != true)
+
+
+
+        do {
+                var x = +prompt("x = ", );
+				if (!isNaN(x) && x != 0) {
+					flag = true
+				} else {
+					alert("Error input");
+					flag = false;
+				}
+                if (x<0) {
+                    flag = false;
+                    alert("x не может быть меньше 0");
+                } 
+			} while (flag != true)
+
+        //var k = +prompt("k = ", );
+        //var x = +prompt("x = ", );
+        ++k;
+        for (var n = 1; n < k; n++) {
+            sum += (Math.pow(x, n) / n);
+        }
+        //console.log(sum.toFixed(2));
+        alert(sum.toFixed(2));
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+    <script>
+        //alert("Программа вычислит значение функции F=(c^(1/4))/(Sin(a)+b*Cos(b))");
+        alert("Программа вычислит значение функции F=1/b^2*1/a+b*x+a/2(a+bx)^2-1/(a^2)lg(a+bx/x)");
+		do
+		{ var a=prompt('введите a',1);
+		  if (isNaN(a)==false)
+		  var b=prompt('введите b',1);
+		  if (isNaN(b)==false)
+		  var x=prompt('введите x',1);
+		  if (isNaN(x)==false)
+		  { var e1=1/(b*b);
+            var e2=1/(a+a*x)
+            var e3=a/(2*((a+b*x)*(a+b*x)));
+            var e123=e1*(e2+e3);
+            var e4=1/(a*a);
+            var e5=Math.log10((a+b*x)/x);
+            
+            
+            var error=(a+b*x)/x);
+            if (error<0){
+                alert("Ошибка логарифма!!!")
+            }
+            else
+
+
+            
+            var F=e123-(e4*e5);
+            if (a=0,b=0,x=0){
+                alert ("Знаменатель не может равняться нулю.");
+            }
+            else
+            { alert(F.toFixed(4)); } }
+         else
+			alert("Необходимо использовать только числа!"); }
+		while (isNaN(a)!==false || isNaN(b)!==false || isNaN(x)!==false);
+    </script>
+</body>
+
+</html>

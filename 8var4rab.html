@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <script>
+        var flag = false;
+        var s = 0,
+            sr = 0;
+        var n;
+        var arr = [];
+        do {
+            n = +prompt("Введите длину массива не больше 5 ", );
+            if (!isNaN(n) && n > 0 && n < 6) {
+                flag = true
+            } else {
+                alert("Error input");
+                flag = false;
+            }
+        } while (flag != true)
+        do {
+            for (var i = 0; i < n;) {
+                var inc = prompt("Введите " + (i + 1) + " элемент массива", );
+                if (!isNaN(inc) && inc != "") {
+                    arr[i] = inc;
+                    flag = true
+                    i++;
+                } else {
+                    alert("Error input");
+                    flag = false;
+                }
+            }
+        } while (flag != true)
+
+        do {
+            cs = prompt(
+                "Для того чтобы посчитать количество чисел больше среднего арефмитического нажмите 1 иначе 0",
+            );
+            if (cs == 1 || cs == 0) {
+                flag = true
+            } else {
+                alert("Error input");
+                flag = false;
+            }
+        } while (flag != true)
+
+        for (var i = 0; i < arr.length; i++) {
+            sr += +arr[i];
+        }
+
+        sr = sr / n;
+        if (cs == 1) {
+            sum = 0;
+            for (var i = 0; i < arr.length; i++) {
+                if (arr[i] > sr)
+                    s++
+            }
+        } else {
+            s = 0;
+            for (var i = 0; i < arr.length; i++) {
+                if (arr[i] < sr)
+                    s++;
+            }
+        }
+        console.log(arr);
+        alert("больше среднего арефметического(" + sr + ") = " + s);
+    </script>
+</body>
+
+</html>

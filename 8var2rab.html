@@ -1,0 +1,93 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<script>
+		var opros;
+		var a, b, c, x, y;
+		var flag = false;
+		do {
+			opros = prompt("Что хотите посчитать F1 или F2", );
+			if (opros === "F1" || opros === "F2" || opros === "f1" || opros === "f2") {
+				flag = true
+			} else {
+				alert("Error input");
+				flag = false;
+			}
+		} while (flag != true)
+
+		if (opros === "F1") {
+			do {
+				var a = +prompt("a = ", );
+				if (!isNaN(a)) {
+					flag = true
+				} else {
+					alert("Error input");
+					flag = false
+				}
+			} while (flag != true)
+
+			do {
+				b = +prompt("b = ", );
+				if (!isNaN(b)) {
+					flag = true
+				} else {
+					alert("Error input");
+					flag = false;
+				}
+			} while (flag != true)
+
+			do {
+				c = +prompt("c = ", );
+				if (!isNaN(c) && c!=0 && c>0) {
+					flag = true
+				} else {
+					alert("Error input");
+					flag = false;
+				}
+			} while (flag != true)
+
+			var f1 = (Math.sqrt(c)) / (Math.sin(a) + b * Math.cos(b));
+			alert(f1.toFixed(2))
+		} else {
+			do {
+				x = +prompt("x = ", );
+				if (!isNaN(x) && x != 0) {
+					flag = true
+				} else {
+					alert("Error input");
+					flag = false
+				}
+			} while (flag != true)
+
+			do {
+				y = +prompt("y = ", );
+				if (!isNaN(y)) {
+					flag = true
+				} else {
+					alert("Error input");
+					flag = false;
+				}
+			} while (flag != true)
+
+			do {
+				b = +prompt("b = ", );
+				if (!isNaN(b) && b != 0 && b != 1) {
+					flag = true
+				} else {
+					alert("Error input");
+					flag = false;
+				}
+			} while (flag != true)
+
+			var f2 = (Math.pow(x, y + 1) + ((b * x) / (8, 2 - 2, 1 * Math.pow(x, 4)))) * (b - 1);
+			alert(f2.toFixed(2));
+		}
+	</script>
+</body>
+
+</html>
